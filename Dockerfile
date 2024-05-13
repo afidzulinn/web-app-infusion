@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 8901
 
-CMD ["python3", "app.py"]
+CMD ["python3", "main.py"]

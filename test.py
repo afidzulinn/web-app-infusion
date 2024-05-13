@@ -15,7 +15,7 @@ start_time = time.time()
 
 @app.route("/")
 def index():
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/start_camera', methods=['POST'])
 def start_detection():
