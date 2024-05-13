@@ -23,7 +23,8 @@ const handleOpenCam  = async() =>{
 }
 const handleDecrement = (e) =>{
     // e.preventDefault();
-    containerTimer.setAttribute('style', 'position: absolute; top:0; left: 50%;')
+    console.log('eaeaeaea');
+    // containerTimer.setAttribute('style', 'position: absolute; top:0; left: 50%;')
     let time = 3;
     btnStarts.disabled = true;
     const timeout = setInterval(()=>{
