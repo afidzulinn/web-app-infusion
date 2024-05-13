@@ -44,32 +44,6 @@ def video_feed():
 
     return Response(stream_with_context(generate_frames()), mimetype='multipart/x-mixed-replace; boundary=frame')
 
-    # return jsonify({"message": "Camera and object detection started successfully."}), 200
-
-# @app.route('/video_feed')
-# def video_feed():
-#     global video_capture
-#
-#     if video_capture is None:
-#         return jsonify({"message": "Camera is not started."}), 400
-#
-#     def generate_frames():
-#         global video_capture
-#         while True:
-#             ret, frame = video_capture.read()
-#             if not ret:
-#                 break
-#
-#             detections = detect_drops(frame)
-#             frame = draw_detections(frame, detections)
-#
-#             process_frame(frame)
-#             yield (b'--frame\r\n'
-#                    b'Content-Type: image/jpeg\r\n\r\n' + cv2.imencode('.jpg', frame)[1].tobytes() + b'\r\n')
-#
-#     return Response(stream_with_context(generate_frames()), mimetype='multipart/x-mixed-replace; boundary=frame')
-    # return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
 
 @app.route('/stop_camera', methods=['POST'])
 def stop_detection():

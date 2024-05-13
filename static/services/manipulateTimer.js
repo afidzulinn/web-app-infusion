@@ -35,6 +35,7 @@ const handleDecrement = (e) =>{
             clearInterval(timeout)
             containerTimer.setAttribute('style', 'position: none')
             btnStarts.disabled = false;
+            
             //funtion stop
             fetch('/stop_camera', { method: 'POST' })
             .then(response => response.json())
